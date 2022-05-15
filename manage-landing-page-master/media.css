@@ -20,7 +20,8 @@
         padding: 12px;
         font-size: 0.7em;
     }
-    .innerPart {
+    .innerPart,
+    .innerThree {
         width: 90%;
     }
 }
@@ -50,6 +51,26 @@
     .mainText h1,
     .mainText p {
         padding-right: 0px;
+    }
+    .innerThree {
+        flex-direction: column;
+    }
+    .contentL,
+    .contentR {
+        width: 100%;
+    }
+    .innerText {
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+    }
+    .innerText h1 {
+        font-size: 1.8em;
+    }
+    .innerText p {
+        padding-right: 0;
+    }
+    .info {
+        justify-content: flex-start;
     }
 }
 
