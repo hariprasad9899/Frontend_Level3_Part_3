@@ -185,5 +185,14 @@
         cursor: pointer;
         background-color: #eee;
     }
+    .bgBlur {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: none;
+        height: 100vh;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.456);
+    }
         
 }

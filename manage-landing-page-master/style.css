@@ -18,15 +18,7 @@ main {
     height: 100vh;
     overflow: hidden;
 }
-.bgBlur {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: none;
-    height: 100vh;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.456);
-}
+
 /* Part One */
 
 .partOne {

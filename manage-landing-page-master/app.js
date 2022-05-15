@@ -85,3 +85,7 @@ inp.addEventListener('input', ()=> {
     inp.style.outline = "none";
     err.style.opacity = "0";
 })
+
+window.onresize = function() {
+    
+}
