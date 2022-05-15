@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,700;1,500&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,body,main {
+    width: 100%;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+main {
+    position: relative;
+}
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
+}
+.bgBlur {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.456);
+}
+/* Part One */
+
+.partOne {
+    width: 100%;
+    z-index: 3;
+    padding: 10px 0px 0px 0px;
+    background-color: white;
+}
+.partOne .menu {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+.comLogo,
+.navigations,
+.reqButton {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger {
+    display: none;
+}
+.comLogo {
+    width: 30%;
+}
+.navigations {
+    width: 50%;
+}
+.reqButton {
+    width: 30%;
+}
+.hamburger img:hover {
+    cursor: pointer;
+}
+.navigations nav a {
+    color: hsl(233, 12%, 13%);
+    text-decoration: none;
+    margin: 12px;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+button {
+    width: 180px;
+    padding: 15px 10px 15px 10px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: hsl(12, 88%, 59%);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.341);
+}
+button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.341);
+}
+.navigations nav a:hover,
+.navigations nav .active {
+    color: hsl(227, 12%, 61%);
+    font-weight: 500;
+}
+.navigations nav a:hover {
+    text-decoration-color: hsl(136, 46%, 56%);
+}
+.mobMenu {
+    display: none;
+}
+
+/* Part Two */
+
+.partTwo {
+    width: 100%;
+    background-color: hsl(13, 100%, 96%);
+}
+.innerPart {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    border: 1px solid black;
+}
+.textContent {  
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.imgContent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+.textContent .mainText {
+    width: 90%;
+    border: 1px solid black;
+}
+.mainText h1 {
+    color: hsl(228, 39%, 23%);
+    padding-right: 20%;
+    font-size: 2.5em;
+}
+.mainText p {
+    color: hsl(227, 12%, 61%);
+    padding-right: 20%;
+    line-height: 1.6;
+    font-size:1em;
+}
+.imgContent img {
+    width: 100%;
+    height: 100%;
+}

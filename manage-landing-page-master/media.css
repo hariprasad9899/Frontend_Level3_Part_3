@@ -1,0 +1,108 @@
+@media screen and (max-width:800px) {
+    .partOne .menu{ width: 95%; }
+    .comLogo img { width: 100px; }
+    .navigations { width: 50%; }
+    .reqButton { width: 30%; }
+    .navigations nav a {
+        margin: 5px;
+        font-size: 0.8em;
+    }
+    .navigations nav a:hover,
+    .navigations nav .active {
+        text-underline-offset: 18px;
+    }
+    .comLogo { 
+        width: 20%;
+        justify-content: start;
+    }
+    .reqButton button {
+        width: 80%;
+        padding: 12px;
+        font-size: 0.7em;
+    }
+    .innerPart {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .innerPart {
+        flex-direction: column;
+    }
+    .textContent {
+        width: 100%;
+        order: 2;
+        align-items: flex-start;
+    }
+    .imgContent {
+        width: 100%;
+    }
+    .mainText {
+        padding: 10px;
+        text-align: center;
+    }
+    .mainText h1 {
+        font-size: 1.7em;
+    }
+    .mainText p {
+        font-size: 0.8em;
+    }
+    .mainText h1,
+    .mainText p {
+        padding-right: 0px;
+    }
+}
+
+
+@media screen and (max-width:550px) {
+    .partOne {
+        padding-top: 10px;
+    }
+    .navigations,
+    .reqButton { display: none; }
+    .comLogo,
+    .hamburger {
+        width: 50%;
+    }
+    .comLogo img { 
+        width:150px; 
+    }
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .mobMenu {
+        width: 90%;
+        z-index: 3;
+        margin-top: 50px;
+        left: 5%;
+        right: 5%;
+        top: 2%;
+        position: absolute;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 0px 5px 0px;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.43);
+    }
+    .mobMenu nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobMenu nav a {
+        color: black;
+        text-align: center;
+        padding: 5px 0px 5px;
+        width: 70%;
+        font-size: 1.1em;
+        text-decoration: none;
+        margin: 10px 0px 10px 0px;
+    }
+    .mobMenu nav a:hover {
+        cursor: pointer;
+        background-color: #eee;
+    }
+        
+}
