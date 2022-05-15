@@ -72,6 +72,66 @@
     .info {
         justify-content: flex-start;
     }
+    .partFive {
+        flex-direction: column;
+    }
+    .partFive .box {
+        width: 100%;
+        padding: 20px 30px 20px 30px;
+    }
+    .innerSeven {
+        flex-direction: column;
+        padding: 20px 10px 20px 10px;
+    }
+    .simplify,
+    .btnElem {
+        width: 100%;
+        text-align: center;
+    }
+    .simplify h1 {
+        padding-right: 0;
+    }
+    .partSeven {
+        background-size: 80%,80%;
+        background-position-y: 50%, 10%;
+        background-position-x: 20%,120%;
+    }
+    .innerPart {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social {
+        order: 4;
+        gap: 20px;
+        margin-top: 20px;
+        align-items: center;
+    }
+    .social img { order: 2;}
+    .social nav { order: 1;}
+    .social nav a {
+        margin: 10px;
+    }
+    .social nav a i {
+        font-size: 1.3em;
+    }
+    .spl {
+        order: 2;
+    }
+    .optionsOne {
+        text-align: left;
+        justify-content: center;
+    }
+    .req {
+        order: 1;
+        align-items: center;
+    }
+    .req .msg {
+        display: none;
+    }
+    #msgP {
+        order: 3;
+        display: block;
+    }
 }
 
 

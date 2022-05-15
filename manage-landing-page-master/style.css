@@ -9,8 +9,7 @@ html,body,main {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: hsl(13, 100%, 96%);
+    background-color: white;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 main {
@@ -35,7 +34,6 @@ main {
     width: 100%;
     z-index: 3;
     padding: 10px 0px 0px 0px;
-    background-color: white;
 }
 .partOne .menu {
     width: 100%;
@@ -107,7 +105,6 @@ button:hover {
 
 .partTwo {
     width: 100%;
-    background-color: hsl(13, 100%, 96%);
 }
 .innerPart {
     width: 85%;
@@ -150,7 +147,6 @@ button:hover {
 .partThree {
     width: 100%;
     margin-top: 50px;
-    background-color: hsl(13, 100%, 96%);
 }
 .innerThree {
     width: 85%;
@@ -215,4 +211,197 @@ button:hover {
     font-size: 0.9em;
     line-height: 1.4;
     color: hsl(227, 12%, 61%);
+}
+
+/* Part Four */
+.partFour {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.partFour h1 {
+    color: hsl(228, 39%, 23%);
+}
+
+/* Part Five */
+
+.partFive {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    cursor: grab;
+}
+.partFive::-webkit-scrollbar  {
+    display: none;
+}
+.partFive .box {
+    flex: 0 0 auto;
+    width: 33%;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+.box img {
+    width: 70px;
+}
+.box h3 {
+    font-size: 0.9em;
+}
+.box p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: hsl(227, 12%, 61%);
+}
+
+/* Part Six */
+
+.partSix {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Part Seven */
+
+
+.partSeven {
+    width: 100%;
+    margin-top: 100px;
+    background-image: url(./images/bg-tablet-pattern.svg), url(./images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat,no-repeat;
+    background-position: left,right;
+    background-size: 40%,40%;
+    background-position-y: 30%, 110%;
+    background-position-x: 10%,120%;
+    background-color: hsl(12, 91%, 57%);
+}
+.innerSeven {
+    width: 90%;
+    padding: 20px 0px 20px 0px;
+    margin: auto;
+    display: flex;
+}
+.simplify,
+.btnElem {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.simplify h1 {
+    color: white;
+    font-size: 1.8em;
+    padding-right: 10%;
+    font-weight: 600;
+}
+.btnElem button {
+    background-color: white;
+    color: hsl(12, 88%, 59%);
+}
+
+/* Part Eight  */
+
+.partEight {
+    width: 100%;
+    padding: 20px 0px 50px 0px;
+    color: white;
+    background-color: black;
+}
+.innerPart {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+.fbox {
+    flex-grow: 1;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+}
+.social nav a i{
+    color: white;
+    margin: 10px;
+    font-size: 1.2em;
+}
+.social nav a i:hover {
+    color:  hsl(12, 91%, 57%);
+}
+.social nav a i:nth-child(1) {
+    margin-left: 0px;
+}
+.spl {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+.optionsOne {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.optionsOne nav {
+    display: flex;
+    flex-direction: column;
+}
+.optionsOne nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 1em;
+    margin: 10px;
+    margin-left: 0px;
+}
+.optionsOne nav a:first-child{
+    margin-top: 0px;
+}
+.optionsOne nav a:hover {
+    cursor: pointer;
+    color: hsl(12, 91%, 57%);
+}
+.req {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.innerMail input {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+    border-radius: 40px;
+}
+.innerMail button {
+    width: 60px;
+    padding: 10px;
+    margin-left: 5px;
+}
+.error p {
+    color: red;
+    font-size: 0.6em;
+    opacity: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.req .msg p{
+    font-size: 0.8em;
+    color: hsl(227, 12%, 61%);
+}
+#msgP {
+    font-size: 0.8em;
+    color: hsl(227, 12%, 61%);
+    display: none;
 }
