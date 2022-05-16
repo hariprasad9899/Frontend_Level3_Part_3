@@ -1,0 +1,57 @@
+@media screen and (max-width:700px) {
+    .innerOne {
+        width: 95%;
+    }
+    .options nav a{
+        margin: 5px;
+        font-size: 0.8em;
+    }
+    .comLogo img {
+        width: 90px;
+    }
+}
+
+
+@media screen and (max-width:550px) {
+    .innerOne {
+        width: 95%;
+        padding: 20px 0px 20px 0px;
+    }
+    .options,
+    .login {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3px;
+        justify-content: center;
+    }
+    .comLogo,
+    .hamburger {
+        width: 50%;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        transition: 0.3s ease-in-out;
+        background-color: hsl(257, 7%, 63%);
+    }
+    .line.hide {
+        opacity: 0;
+    }
+    .line.rotateElemOne {
+        width: 25px;
+        transform: rotate(45deg) translate(8px,8px);
+    }
+    .line.rotateElemTwo {
+        width: 25px;
+        transform: rotate(-45deg);
+    }
+}
