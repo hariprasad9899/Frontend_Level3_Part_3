@@ -9,6 +9,7 @@ html,body,main {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
 .partOne {
@@ -20,7 +21,6 @@ html,body,main {
     display: flex;
     padding: 5px 0px 5px 0px;
     align-items: center;
-    background-color: #eee;
 }
 .comLogo {
     width: 20%;
@@ -48,7 +48,8 @@ html,body,main {
 .options nav a:first-child {
     margin-left: 0px;
 }
-.options nav a.active {
+.options nav a.active,
+.options nav a:hover {
     color: hsl(257, 27%, 26%);
 }
 .login button {
@@ -69,6 +70,7 @@ html,body,main {
 .login button.active,
 .login button:hover {
     color: white;
+    transition: 0.5s ease;
     cursor: pointer;
     background-color: hsl(180, 66%, 49%);
 }
@@ -77,4 +79,69 @@ html,body,main {
 }
 .hamburger .wrapper:hover {
     cursor: pointer;
+}
+
+/* Part Two */
+
+.partTwo {
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+}
+.innerTwo {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.contentL,
+.contentR {
+    padding: 40px 0px 40px 0px;
+}
+.contentL {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+}
+.contentR {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.contentR img {
+    width: 130%;
+    margin-left: 200px;
+}
+.contentWrapper {
+    width: 90%;
+}
+.contentWrapper h1 {
+    color: hsl(260, 8%, 14%);
+    font-size: 4em;
+    line-height: 1.2;
+}
+.contentWrapper p {
+    color: hsl(257, 7%, 63%);
+    padding-right: 20%;
+    letter-spacing:0.5px;
+    margin-top: -30px;
+}
+.contentWrapper button {
+    margin-top: 10px;
+}
+.cyanBtn {
+    width: 160px;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    background-color: hsl(180, 66%, 49%);
+    font-family: 'Poppins', sans-serif;
+}
+.cyanBtn:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
