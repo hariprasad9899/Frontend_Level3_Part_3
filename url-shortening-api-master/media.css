@@ -1,3 +1,23 @@
+@media screen and (max-width:1050px) {
+    .result {
+        flex-wrap: wrap;
+        word-wrap: break-word;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .result button,
+    .result .shortenLink {
+        margin-top: -2px;
+        width: 100%;
+    }
+    .result button,
+    .result .givenLink {
+        width: 100%;
+    }
+    
+}
+
+
 @media screen and (max-width:700px) {
     .innerOne {
         width: 95%;
@@ -34,6 +54,21 @@
     }
     .contentR img {
         margin-left: 150px;
+    }
+    .innerThree {
+        width: 95%;
+        background: hsl(257, 27%, 26%) url(./images/bg-shorten-mobile.svg) top right no-repeat;
+    }
+    .inpSec {
+        flex-direction: column;
+    }
+    .inpSec input,
+    .inpSec button {
+        width: 100%;
+        font-size: 1em;
+    }
+    .break {
+        align-self: flex-start;
     }
 }
 

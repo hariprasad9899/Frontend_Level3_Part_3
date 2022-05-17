@@ -145,3 +145,100 @@ html,body,main {
     cursor: pointer;
     opacity: 0.5;
 }
+
+/* Part Three */
+
+.partThree {
+    width: 100%;
+}
+.innerThree {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px 0px 20px 0px;
+    border: 1px solid violet;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(./images/bg-shorten-desktop.svg), url(./images/bg-shorten-desktop.svg);
+    background-repeat: no-repeat,no-repeat;
+    background-position-x: 80%,90%;
+    background-position-y: 5%,10%;
+    background-size: cover,cover;
+}
+.inpSec {
+    width: 90%;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.inpSec input {
+    width: 75%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: hsl(0, 87%, 67%);
+    font-family: 'Poppins', sans-serif;
+}
+.inpSec input::placeholder {
+    color: hsl(0, 87%, 67%);
+}
+.inpSec button {
+    width: 20%;
+    padding: 18px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+.inpSec button:hover {
+    cursor: pointer;
+    background-color: hsl(180, 100%, 50%);
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+    color: red;
+    margin-left: 2%;
+}
+
+/* Part Four */
+
+.partFour {
+    width: 100%;
+    margin-top: 10px;
+}
+.innerFour {
+    width: 90%;
+    margin: auto;
+}
+.result {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    margin: 12px 0px 12px 0px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(219, 215, 215);
+}
+.result .givenLink {
+    width: 50%;
+}
+.result button {
+    border-radius: 5px;
+}
+
+
+/* 
+.partFive {
+    width: 100%;
+    height: 50%;
+    background-color:  hsl(264, 4%, 74%);
+} */
