@@ -57,6 +57,7 @@
     }
     .innerThree {
         width: 95%;
+        margin-top: 50px;
         background: hsl(257, 27%, 26%) url(./images/bg-shorten-mobile.svg) top right no-repeat;
     }
     .inpSec {
@@ -76,6 +77,52 @@
     .innerFive p {
         padding: 10px;
     }
+    .innerSix {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    .boxSix {
+        width: 100%;
+        text-align: center;
+    }
+    .boxSix:nth-child(3),
+    .boxSix:nth-child(4),
+    .boxSix:nth-child(5) {
+        margin-top:0;
+    }
+    .boxSix #imgBox {
+        width: 15%;
+        margin: auto;
+        margin-top: -40px;
+    }
+    #bgLine {
+        display: none;
+    }
+    #bgLineMob {
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 10px;
+        height: 100%;
+        background-color: hsl(180, 66%, 49%);
+    }
+    .partSeven {
+        background-image: url(./images/bg-boost-mobile.svg);
+    }
+    .innerEight {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .footMenu {
+        width: 80%;
+        text-align: center;
+    }
+    
 }
 
 
@@ -121,6 +168,9 @@
         width: 25px;
         transform: rotate(-45deg) translate(3px,-10px);
     }
+    .partSeven h1 {
+        font-size: 1.8em;
+    }
     .contentWrapper h1 {
         font-size: 2em;
     }
@@ -129,5 +179,69 @@
         letter-spacing: 0;
         padding-right: 0px;
         margin-top: 20px;
+    }
+    .mobMenu {
+        display: none;
+        width: 90%;
+        z-index: 2;
+        top: 10%;
+        padding: 20px 0px 30px 0px;
+        color: white;
+        border-radius: 10px;
+        left: 50%;
+        flex-direction: column;
+        gap: 20px;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        background-color: hsl(257, 27%, 26%);
+    }
+    .mobNav {
+        width: 90%; 
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid hsl(257, 7%, 63%);
+    }
+    .btnSet {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .mobNav a {
+        margin: 23px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .mobNav a:hover {
+        color: hsl(180, 66%, 49%);
+    }
+    .btnSet button {
+        width: 80%;
+        padding: 10px;
+        font-size: 0.9em;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 30px;
+        background-color: hsl(257, 27%, 26%);
+        font-family: 'Poppins', sans-serif;
+    }
+    .btnSet button.active {
+        color: white;
+        background-color: hsl(180, 66%, 49%);
+    }
+    .bgBlur {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: none;
+        height: 100vh;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.456);
     }
 }

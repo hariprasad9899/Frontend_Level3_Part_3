@@ -19,6 +19,11 @@ async function shorten(link)  {
     
 const ham = document.getElementById("ham");
 const lineElem = document.getElementsByClassName('line');
+const mobMenu = document.getElementsByClassName('mobMenu')[0];
+const mobNav = document.getElementById('mobNav');
+const btnSet = document.getElementsByClassName("btnSet")[0];
+const bgBlur = document.getElementsByClassName('bgBlur')[0];
+
 
 function addStyle() {
     lineElem[1].classList.add("hide");
@@ -31,15 +36,36 @@ function removeStyle() {
     lineElem[2].classList.remove("rotateElemTwo")
 }
 
+function showMonMenu() {
+    addStyle();
+    mobMenu.style.display = "flex";
+    ham.classList.remove("open","adjust");
+    bgBlur.style.display = "block";
+    document.body.classList.add("stop-scrolling")
+}
+
+function hideMobMenu() {
+    removeStyle()
+    mobMenu.style.display = "none";
+    ham.classList.add("open","adjust");
+    bgBlur.style.display = "none";
+    document.body.classList.remove("stop-scrolling")
+}
+
 ham.addEventListener('click', () => {
     if(ham.classList.contains("open")) {
-        addStyle();
-        ham.classList.remove("open","adjust");
+        showMonMenu();
     } else {
-        removeStyle()
-        ham.classList.add("open","adjust")
+        hideMobMenu();
     }
 })
+
+window.addEventListener('click', (e) => {
+    if(!e.target.classList.contains("mob")) {
+        hideMobMenu();
+    }
+})
+
 
 const btns = [...document.getElementsByClassName('btns')]
 const menu = [...document.getElementsByClassName('menu')]

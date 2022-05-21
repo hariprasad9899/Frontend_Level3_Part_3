@@ -6,14 +6,23 @@
 }
 html,body,main {
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    background-color: hsl(255, 15%, 95%);
+}
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
+}
+main {
+    position: relative;
 }
 .partOne {
     width: 100%;
+    padding-top: 20px;
+    background-color: white;
 }
 .innerOne {
     width: 90%;
@@ -85,7 +94,8 @@ html,body,main {
 
 .partTwo {
     width: 100%;
-    padding: 20px 0px 20px 0px;
+    background-color: white;
+    padding: 20px 0px 40px 0px;
 }
 .innerTwo {
     width: 90%;
@@ -154,6 +164,7 @@ html,body,main {
 .innerThree {
     width: 90%;
     margin: auto;
+    margin-top: -40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,7 +224,6 @@ html,body,main {
 
 .partFour {
     width: 100%;
-    margin-top: 10px;
 }
 .innerFour {
     width: 90%;
@@ -227,7 +237,7 @@ html,body,main {
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(219, 215, 215);
+    background-color: white;
 }
 .result .givenLink {
     width: 50%;
@@ -264,4 +274,152 @@ html,body,main {
 .innerFive p {
     padding: 0% 7% 0% 7%;
     color: hsl(257, 7%, 63%);
+}
+
+/* Part Six */
+.partSix {
+    width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+}
+.innerSix {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#bgLine {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 8px;
+    background-color: hsl(180, 66%, 49%);
+}
+.boxSix {
+    width: 30%;
+    z-index: 2;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+}
+.boxSix h3 {
+    color: hsl(257, 27%, 26%);
+}
+.boxSix p {
+    color: hsl(257, 7%, 63%);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+.boxSix:nth-child(3) {
+    margin-top: -50px;
+}
+.boxSix:nth-child(4) {
+    margin-top: 50px;
+}
+.boxSix:nth-child(5) {
+    margin-top: 140px;
+}
+.boxSix #imgBox {
+    width: 20%;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -40px;
+    background-color: hsl(257, 27%, 26%);
+}
+.boxSix #imgBox img {
+    margin: auto;
+    width: 90%;
+}
+#bgLineMob {
+    display: none;
+}
+
+/* Part Seven */
+
+.partSeven {
+    width: 100%;
+    padding: 30px 0px 30px 0px;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(./images/bg-boost-desktop.svg);
+}
+.partSeven button {
+    width: 200px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 30px;
+    background-color: hsl(180, 66%, 49%);
+    font-family: 'Poppins', sans-serif;
+}
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.partEight {
+    width: 100%;
+    color: white;
+    padding: 20px 0px 20px 0px;
+    background-color:  hsl(260, 8%, 14%);
+}
+.innerEight {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+.secOne {
+    width: 35%;
+}
+.secOne img {
+    width: 140px;
+}
+.secTwo,.secThree,.secFour {
+    width: 15%;
+}
+.secFive {
+    width: 20%;
+}
+.opt h3 {
+    font-size: 1em;
+    margin-top: 0px;
+}
+.opt nav {
+    display: flex;
+    flex-direction: column;
+}
+.opt nav a {
+    color: hsl(257, 7%, 63%);
+    text-decoration: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 0.8em;
+}
+.opt nav a:hover {
+    color: hsl(180, 66%, 49%);
+}
+.secFive nav a {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.secFive nav a:first-child {
+    margin-left: 0px;
+}
+.secFive nav a:hover {
+    color: hsl(180, 66%, 49%);
+}
+
+/* Mob Nav  */
+
+.mobMenu {
+    display: none;
 }
