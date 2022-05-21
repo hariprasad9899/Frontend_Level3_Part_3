@@ -68,6 +68,16 @@
         width: 100%;
         font-size: 1em;
     }
+    .innerFour {
+        width: 95%;
+    }
+    .result {
+        padding: 20px;
+    }
+    .result .givenLink {
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
     .break {
         align-self: flex-start;
     }

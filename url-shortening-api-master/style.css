@@ -242,6 +242,10 @@ main {
 .result .givenLink {
     width: 50%;
 }
+.result .shortenLink {
+    color: hsl(180, 66%, 49%);
+    font-weight: 600;
+}
 .result button {
     border-radius: 5px;
 }

@@ -30,6 +30,7 @@ function addStyle() {
     lineElem[0].classList.add("rotateElemOne")
     lineElem[2].classList.add("rotateElemTwo")
 }
+
 function removeStyle() {
     lineElem[1].classList.remove("hide");
     lineElem[0].classList.remove("rotateElemOne")
@@ -118,21 +119,37 @@ async function provideUrl(val) {
     if (newUrl == undefined) {
         showError()
     } else {
-        addDiv(provideUrl,newUrl);
+        urlInp.value = "";
+        addStorage(provideUrl,newUrl);
     }
-    
 }
-function addDiv(url1,url2) {
-    const inner = document.getElementsByClassName("innerFour")[0];
-    let myResultDiv = resultDiv.cloneNode(true);
-    myResultDiv.style.display = "flex";
-    let givenLink = myResultDiv.getElementsByClassName("givenLink")[0];
-    let shortenLink = myResultDiv.getElementsByClassName("shortenLink")[0];
-    givenLink.innerText = url1;
-    shortenLink.innerText = url2;
-    inner.appendChild(myResultDiv);
-    copyElem();
+
+function addStorage(url1,url2) {
+    localStorage.setItem(url2,url1)
+    addDiv();
 }
+
+let checkArr = [];
+
+let addDiv = function() {
+    let shortenUrl = Object.keys(localStorage);
+    let actualUrl = Object.values(localStorage);
+    for(let i in shortenUrl) {
+        if(!checkArr.includes(shortenUrl[i])) {
+            checkArr.push(shortenUrl[i]);
+            const inner = document.getElementsByClassName("innerFour")[0];
+            let myResultDiv = resultDiv.cloneNode(true);
+            myResultDiv.style.display = "flex";
+            let givenLink = myResultDiv.getElementsByClassName("givenLink")[0];
+            let shortenLink = myResultDiv.getElementsByClassName("shortenLink")[0];
+            givenLink.innerText = actualUrl[i];
+            shortenLink.innerText = shortenUrl[i];
+            inner.appendChild(myResultDiv);
+            // copyElem();
+        }
+    }
+}
+addDiv();
 
 function copyText(elem) {
     let urlLink = elem.previousElementSibling.innerText;
