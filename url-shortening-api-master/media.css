@@ -70,6 +70,12 @@
     .break {
         align-self: flex-start;
     }
+    .innerFive {
+        width: 80%;
+    }
+    .innerFive p {
+        padding: 10px;
+    }
 }
 
 

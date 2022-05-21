@@ -1,32 +1,22 @@
-// async function shorten(link)  {
-//     const encodedParams = new URLSearchParams();
-//     encodedParams.append("url", link);
+async function shorten(link)  {
+    const encodedParams = new URLSearchParams();
+    encodedParams.append("url", link);
 
-//     const options = {
-//         method: 'POST',
-//         headers: {
-//             'content-type': 'application/x-www-form-urlencoded',
-//             'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com',
-//             'X-RapidAPI-Key': 'a28b4d4c28msh80ae5fdfb74b90bp158054jsn28c6cbaab4bd'
-//         },
-//         body: encodedParams
-//     };
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com',
+            'X-RapidAPI-Key': 'a28b4d4c28msh80ae5fdfb74b90bp158054jsn28c6cbaab4bd'
+        },
+        body: encodedParams
+    };
 
-//     let result = await fetch('https://url-shortener-service.p.rapidapi.com/shorten', options);
-//     let data = await result.json();
-//     return data;
-// }
+    let result = await fetch('https://url-shortener-service.p.rapidapi.com/shorten', options);
+    let data = await result.json();
+    return data;
+}
     
-// const inp = document.getElementById('inp');
-// const txt = document.getElementById('txt');
-// const btn = document.getElementById('btn');
-
-
-// btn.onclick = async function() {
-//     let x = await shorten(inp.value);
-//     txt.innerText = x.result_url;
-// }
-
 const ham = document.getElementById("ham");
 const lineElem = document.getElementsByClassName('line');
 
@@ -70,3 +60,80 @@ for(let eachElem of menu) {
         eachElem.classList.add("active");
     })
 }
+
+
+const resultDiv = document.getElementsByClassName("result")[0];
+const shortenBtn = document.getElementById("shortenBtn");
+const urlInp = document.getElementById("urlInp");
+const err = document.getElementsByClassName('break')[0];
+
+shortenBtn.onclick = async function() {   
+    if(urlInp.value.length < 1){
+        showError()
+    } else {
+        await provideUrl(urlInp.value)
+    }
+}
+
+function showError() {
+    err.style.display = "block";
+    urlInp.style.outline = "3px solid hsl(0, 87%, 67%)";
+}
+
+urlInp.addEventListener('input', ()=> {
+    err.style.display = "none";
+    urlInp.style.outline = "none";
+})
+
+async function provideUrl(val) {
+    let provideUrl = val;
+    let data = await shorten(val);
+    let newUrl = data.result_url;
+    if (newUrl == undefined) {
+        showError()
+    } else {
+        addDiv(provideUrl,newUrl);
+    }
+    
+}
+function addDiv(url1,url2) {
+    const inner = document.getElementsByClassName("innerFour")[0];
+    let myResultDiv = resultDiv.cloneNode(true);
+    myResultDiv.style.display = "flex";
+    let givenLink = myResultDiv.getElementsByClassName("givenLink")[0];
+    let shortenLink = myResultDiv.getElementsByClassName("shortenLink")[0];
+    givenLink.innerText = url1;
+    shortenLink.innerText = url2;
+    inner.appendChild(myResultDiv);
+    copyElem();
+}
+
+function copyText(elem) {
+    let urlLink = elem.previousElementSibling.innerText;
+    let helperInp = document.getElementById("helperInp");
+    helperInp.value = urlLink;
+    helperInp.select();
+    helperInp.setSelectionRange(0, 999);
+    document.execCommand("Copy")
+}
+
+let copyElem = function() {
+    let copy = [...document.getElementsByClassName('copyBtn')];
+    for(let eachElem of copy) {
+        eachElem.addEventListener('click', ()=> {
+            for(let eachCopy of copy) {
+                eachCopy.innerText = "copy";
+                eachCopy.style.backgroundColor = "hsl(180, 66%, 49%)";
+            }
+            copyText(eachElem)
+            eachElem.innerText = "copied!";
+            eachElem.style.backgroundColor = "hsl(257, 27%, 26%)";
+            setTimeout(()=> {
+                eachElem.innerText = "copy";
+                eachElem.style.backgroundColor = "hsl(180, 66%, 49%)";
+            },20000)
+        })
+    }
+}
+
+copyElem();
